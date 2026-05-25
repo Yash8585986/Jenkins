@@ -2,19 +2,30 @@ pipeline {
     agent any
     stages {
         stage('Build') {
-            steps {
-                echo "Building application"
+            steps{
+                sh """
+                echo "Building application with script module"
+
+                """                  
             }
         }
-        stage('Test') {
-            steps {
-                echo "Testing Application"
+        stage('TEST') {
+            steps{
+                sh """
+                echo "Testing application with script module"
+
+                """
             }
+            
         }
         stage('Deploy') {
-            steps {
-                echo "Deploying Application"
+            steps{
+                sh """
+                echo "Deploying application with script module"
+
+                """
             }
+            
         }
     }
 }
