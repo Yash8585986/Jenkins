@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        node {
+            label 'Roboshop'
+        }
+    }
     stages {
         stage('Build') {
             steps{
